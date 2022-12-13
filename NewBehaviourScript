@@ -1,0 +1,34 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+ // you can change the file name if you want
+public class NewBehaviourScript : MonoBehaviour
+{
+    // when you use this code in your character put the SpriteRenderer of your charactes in the space with only the number 0 in and  is not the sprite array
+    public SpriteRenderer spriteRenderer;
+    public Sprite[] spriteArray;
+
+    void Update()
+    {  
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(Vector3.right * 0.02f );
+            spriteRenderer.sprite = spriteArray[0];
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+          transform.Translate(Vector3.left * 0.02f );
+          spriteRenderer.sprite = spriteArray[0];
+        }
+        else if (Input.GetKey(KeyCode.W))
+        {
+            transform.Translate(Vector3.up * 0.02f );
+            spriteRenderer.sprite = spriteArray[0];
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(Vector3.down * 0.02f );
+            spriteRenderer.sprite = spriteArray[//put the array number of your sprite here];
+        }
+    }
+}
